@@ -1,0 +1,32 @@
+<!--pages/bookcity/bookcity.wxml-->
+<!-- 搜索 -->
+<van-search
+  placeholder="请输入搜索关键词"
+  show-action
+  bind:search="onSearch"
+  bind:cancel="onCancel"
+/>
+
+<!-- <轮播图> -->
+<view>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorcolor}}" indicator-active-color="{{indicatoractivecolor}}" circular="{{circular}}">
+    <block wx:for="{{imgUrls}}" wx:key=''>
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+
+<!-- 选项 -->
+<view class="main">
+  <view class="select1" bindtap="renlianshibie">
+    <image src="/images/icon1.png" class="sel-img"></image>
+    <text class="sel-text">排行</text>
+  </view>
+  <view class="select1" bindtap="kaoqin" >
+    <image src="/images/icon2.png" class="sel-img"></image>
+    <text class="sel-text">分类</text>
+  </view>
+</view>

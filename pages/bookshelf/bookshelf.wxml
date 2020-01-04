@@ -1,0 +1,23 @@
+<!--pages/bookshelf/bookshelf.wxml-->
+<import src='../template/book/book_template.wxml' />
+
+<view wx:if="{{isBook}}">
+    <text>书架空空，去书城看看</text>
+</view>
+<view wx:else class="container">
+    <view class="main">
+        <template is='book' />
+    </view>
+    <view class="main">
+        <template is='book' />
+    </view>
+    <view class="main">
+        <template is='book' />
+    </view>
+    <view class="main">
+        <template is='book' />
+    </view>
+    <view class="main">
+        <template is='book' />
+    </view>
+</view>

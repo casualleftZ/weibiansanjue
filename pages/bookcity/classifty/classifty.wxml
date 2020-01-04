@@ -1,0 +1,8 @@
+<!--pages/bookcity/classifty/classifty.wxml-->
+<view>
+  
+  <!-- <view class="nanv">
+    <text>男生</text>
+  </view> -->
+  <view class="hr"></view>
+</view>

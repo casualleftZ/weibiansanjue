@@ -1,0 +1,14 @@
+.book-container{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10rpx
+  }
+  .book-img{
+    height: 270rpx;
+    width: 200rpx;
+    padding-bottom: 20rpx;
+  }
+  .book-title{
+    margin-bottom: 12rpx;
+    font-size: 24rpx
+  }

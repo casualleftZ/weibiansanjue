@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-cell": "/dist/cell/index",
+    "van-image": "/dist/image/index"
+  },
+  "navigationBarTitleText": "个人中心"
+}
