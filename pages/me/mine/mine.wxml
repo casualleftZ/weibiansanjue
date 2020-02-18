@@ -1,0 +1,14 @@
+<!--pages/me/mine/mine.wxml-->
+<view wx:if="{{index==1}}">
+  <text>我的书</text>
+</view>
+<view wx:if="{{index==2}}">
+  <text>关注</text>
+</view>
+<view wx:if="{{index==3}}">
+  <text>粉丝</text>
+</view>
+<view wx:if="{{index==4}}">
+  <text>我的文章</text>
+</view>
+

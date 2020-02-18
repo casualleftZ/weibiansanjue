@@ -1,10 +1,12 @@
 {
   "pages": [
     "pages/bookshelf/bookshelf",
+    "pages/me/me",
     "pages/logs/logs",
     "pages/bookcity/bookcity",
-    "pages/me/me",
-    "pages/bookcity/classifty/classifty"
+    "pages/bookcity/classifty/classifty",
+    "pages/me/mine/mine",
+    "pages/me/advice/advice"
     
   ],
   "window": {

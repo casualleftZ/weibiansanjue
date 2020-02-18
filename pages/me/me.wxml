@@ -3,7 +3,7 @@
 <view wx:if="{{!isLogin}}">
   <image class="head-img" src="/images/avtor.jpg" mode="aspectFill"></image>
   <view style="width:100%">
-  <button class="login" size="mini" open-type="getUserInfo" bindgetuserinfo="getUserInfo">立即登录</button>
+    <button class="login" size="mini" open-type="getUserInfo" bindgetuserinfo="getUserInfo">立即登录</button>
   </view>
 </view>
 
@@ -19,12 +19,32 @@
 
 
 <view class="me_1">
-  <van-cell title="个人资料" icon="location-o" is-link link-type="navigateTo" url="" />
-  <van-cell title="历史报告" icon="location-o" is-link/>
+  <van-divider customStyle="color: #1989fa;border-color: #1989fa;font-size: 18px;"></van-divider>
+
+  <view wx:if="{{isLogin}}" id='services' class='services'>
+    <view class="grid">
+      <view class='grid-items'>
+        <block wx:for="{{servers}}" wx:key="">
+          <view class='grid-item'>
+            <view class='navigator' data-index='{{item.index}}' bindtap='bindNavigator' hover-class="none">
+              <view class='item-content'>
+                <view class="item-content-icon">
+                  <text class="weui-grid_label">{{item.number}}</text>
+                </view>
+                <text class="weui-grid_label">{{item.name}}</text>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+
 </view>
+
 <view class="me_2">
-  <van-cell title="推荐给好友" icon="location-o" clickable="true" bind:click="onShareTap" />
-  <van-cell title="设置" icon="location-o" is-link url="" />
-  <van-cell title="给我们建议" icon="location-o" is-link value="来吐槽~" is-link url="" />
-  <van-cell title="关于我们" icon="location-o" is-link url="" />
+  <van-cell title="我的文章" icon="description" data-index='4' bind:click="bindNavigator" is-link link-type="navigateTo" />
+  <van-cell title="我要发书" icon="edit" is-link bind:click="bindtoNavigator" data-index='5'/>
+  <van-cell title="给我们建议" icon="smile-comment-o" is-link value="来吐槽~" is-link bind:click="bindtoNavigator" data-index='6'/>
+  <van-cell title="关于我们" icon="info-o" is-link bind:click="bindtoNavigator" data-index='7' />
 </view>

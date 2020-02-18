@@ -51,22 +51,6 @@ App({
   },
 
 
-  // saveUser: function() {
-  //   console.log(this.globalData.userInfo)
-  //   wx.request({
-  //     url: this.globalData.serverUrl + '/saveuser',
-  //     method: 'POST',
-  //     data: {
-  //       userId: this.globalData.openId,
-  //       nickName: this.globalData.userInfo.nickName,
-  //       faceImage: this.globalData.userInfo.avatarUrl
-  //     },
-  //     success: (res) => {
-  //       console.log(res.data)
-  //     }
-  //   })
-  // },
-
   // 将用户信息存入缓存
   setGlobalInfo: function(user) {
     wx.setStorageSync("userInfo", user)
