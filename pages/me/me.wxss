@@ -6,6 +6,11 @@
   -webkit-filter: blur(20px);
 }
 
+.login {
+  margin: 0 auto;
+  margin-left: 280rpx
+}
+
 .user-img {
   height: 238rpx;
   width: 175rpx;
