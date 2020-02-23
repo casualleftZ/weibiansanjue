@@ -1,6 +1,7 @@
 <!--pages/bookshelf/bookshelf.wxml-->
 <import src='../template/book/book_template.wxml' />
 
+
 <view wx:if="{{isBook}}">
     <text>书架空空，去书城看看</text>
 </view>

@@ -1,0 +1,42 @@
+<!--pages/me/release/release.wxml-->
+<view class="container">
+  <form class="sendForm" bindsubmit="formSubmit">
+    <view>
+      <view class="form-lable">新书名称：</view>
+      <view class="form-value">
+        <input name="title" placeholder="请输入新书名字" />
+      </view>
+    </view>
+
+    <view>
+      <view class="form-lable">新书描述：</view>
+      <view class="form-value">
+        <textarea name="content" style='height:150rpx' placeholder="请输入对您新书的介绍..." />
+      </view>
+    </view>
+
+    <view class="form-lable">添加新书封面：</view>
+    <view class="form-value">
+      <view class="image_content">
+        <view class='image' wx:if="{{hideAdd}}">
+          <image class="moment_img" src="{{img_url}}"></image>
+        </view>
+        <view wx:if="{{!hideAdd}}">
+          <view class="image-container">
+            <view class='image'>
+              <image bindtap="chooseimage" class="moment_img" src='/images/add.png'></image>
+            </view>
+            <view class="img-text-con">
+              <text class="img-text">点击左侧上传封面，做多上传一张</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="form-submit">
+      <button type="primary" formType="submit">前往发布第一章</button>
+    </view>
+
+  </form>
+</view>

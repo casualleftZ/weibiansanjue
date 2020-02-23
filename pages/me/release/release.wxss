@@ -1,0 +1,75 @@
+/* pages/me/release/release.wxss */
+page{
+  background: #f8f8f8;
+}
+.container {
+
+  height: 100vh;
+  border-bottom: 1px solid #ececec;
+  color: #000;
+}
+
+.form-lable {
+  padding: 14rpx 20rpx;
+}
+
+.form-value {
+  background: #fff;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  padding: 12rpx;
+  font-size: 30rpx
+}
+
+.form-topic {
+  background: #fff;
+  margin: 30rpx 0;
+  display: flex;
+}
+
+.form-item1 {
+  width: 100rpx;
+  color: #000;
+  border-right: 1px solid #ececec;
+  text-align: center;
+  height: 20rpx;
+  flex: auto;
+  padding: 20rpx 10rpx;
+}
+
+.form-item2 {
+  flex: auto;
+  padding: 20rpx 10rpx;
+  font-size: 30rpx
+}
+
+.form-submit {
+  padding: 0 20rpx;
+  margin-top: 50rpx
+}
+.image{
+ width:31%;
+ height: 100px;
+ padding: 2px
+}
+.moment_img{
+ width: 220rpx;
+ height: 226rpx;
+}
+.image_content{
+ width: 100%;
+ display: flex;
+ flex-wrap: wrap;
+ margin-bottom: 20px
+}
+.img-text-con{
+  padding-top: 108rpx;
+  padding-left: 31rpx
+}
+.img-text{
+ color: 	#999999
+}
+.image-container{
+  display: flex;
+  flex-direction: row
+}

@@ -1,0 +1,19 @@
+<!--pages/chapter/publish/publish.wxml-->
+<view class='container'>
+  <form bindsubmit="uploadBook">
+    <view class="form-topic">
+      <view class="form-item1">标题</view>
+      <view class="form-item2">
+        <input placeholder='章节标题' name="title" ></input>
+      </view>
+    </view>
+
+    <view class="form-value">
+      <textarea name="content" maxlength='-1' style="width:95%" auto-height='true' placeholder="请输入章节的内容..." />
+    </view>
+
+    <view class="form-submit">
+      <button type="primary" formType="submit">确认发布</button>
+    </view>
+  </form>
+</view>

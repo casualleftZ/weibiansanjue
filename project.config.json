@@ -50,6 +50,34 @@
 					"id": -1,
 					"name": "pages/bookcity/classifty/classifty",
 					"pathName": "pages/bookcity/classifty/classifty",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "pages/me/mine/mine",
+					"pathName": "pages/me/mine/mine",
+					"query": "index=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/me/advice/advice",
+					"pathName": "pages/me/advice/advice",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/me/release/release",
+					"pathName": "pages/me/release/release",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/chapter/publish/publish",
+					"pathName": "pages/chapter/publish/publish",
 					"scene": null
 				}
 			]

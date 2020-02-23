@@ -1,14 +1,26 @@
-.book-container{
-    display: flex;
-    flex-direction: column;
-    padding: 0 10rpx
-  }
-  .book-img{
-    height: 270rpx;
-    width: 200rpx;
-    padding-bottom: 20rpx;
-  }
-  .book-title{
-    margin-bottom: 12rpx;
-    font-size: 24rpx
-  }
+.book-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10rpx;
+  white-space:normal; 
+  width:200rpx;
+}
+
+.book-img {
+  height: 270rpx;
+  width: 200rpx;
+  padding-bottom: 20rpx;
+}
+
+.status {
+  margin-bottom: 12rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.book-title {
+  margin-bottom: 12rpx;
+  font-size: 30rpx;
+  font-weight: 100;
+  
+}

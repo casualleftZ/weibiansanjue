@@ -1,6 +1,9 @@
 <template name='book'>
     <view class="book-container" catchtap="onMovieTap">
-      <image class="book-img" src="/images/book.jpg"></image>
-      <text class="book-title">深度学习</text>
+      <image class="book-img" src="{{bookIcon}}"></image>
+      <text class="status" wx:if="{{bookStatus==0}}">审核中</text>
+      <text class="status" wx:if="{{bookStatus==1}}">连载中</text>
+      <text class="status" wx:if="{{bookStatus==2}}">已完结</text>
+      <text class="book-title">{{bookName}}</text>
     </view>
   </template>

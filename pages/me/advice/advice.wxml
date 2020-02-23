@@ -1,2 +1,25 @@
 <!--pages/me/advice/advice.wxml-->
-<text>pages/me/advice/advice.wxml</text>
+<view>
+
+    <form bindsubmit='submitAdvice'>
+        <view class='container-content'>
+            <label class='label'>意见反馈:(必填)</label>
+            <textarea name="adviceContent" class='content' placeholder='输入个人意见反馈，字数在200字内...'>
+            </textarea>
+            <view class="phone">
+            <label class='label'>联系方式:</label>
+            <input name="phone" class='content' placeholder='输入电话号码'></input>
+            </view>
+        </view>
+
+        <view class='container-tips'>
+            <image src='/images/report_face.png' class='report-face'></image>
+           感谢您的建议，我们会更加努力，创造更好的明天！
+        </view>
+
+        <view>
+            <button class="submitBtn" type="" form-type='submit'>提  交</button>
+        </view>
+
+    </form>
+</view>

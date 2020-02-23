@@ -28,7 +28,7 @@ Page({
     })
     
     //获取用户信息并存入缓存
-    this.getUser(openId)
+    // this.getUser(openId)
 
   },
 
@@ -100,10 +100,10 @@ Page({
       
       switch (index) {
         case "5":
-          url = '/pages/me/mine/mine?index=' + index
+          url = '/pages/me/release/release'
           break;
         case "6":
-          url = '/pages/me/advice/advice?index=' + index
+          url = '/pages/me/advice/advice'
           break;
         case "7":
           url = '/pages/me/advice/advice?index=' + index
@@ -181,7 +181,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    this.getUser(this.data.openId)
   },
 
   /**

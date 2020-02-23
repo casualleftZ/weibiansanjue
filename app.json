@@ -6,14 +6,19 @@
     "pages/bookcity/bookcity",
     "pages/bookcity/classifty/classifty",
     "pages/me/mine/mine",
-    "pages/me/advice/advice"
-    
+    "pages/me/advice/advice",
+    "pages/me/release/release",
+    "pages/chapter/chapter",
+    "pages/chapter/publish/publish"
+   
+   
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#98F5FF",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh":true
   },
   "tabBar": {
     "color": "#a9b7b7",

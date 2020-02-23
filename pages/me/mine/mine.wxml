@@ -1,14 +1,65 @@
 <!--pages/me/mine/mine.wxml-->
-<view wx:if="{{index==1}}">
-  <text>我的书</text>
-</view>
-<view wx:if="{{index==2}}">
-  <text>关注</text>
-</view>
-<view wx:if="{{index==3}}">
-  <text>粉丝</text>
-</view>
-<view wx:if="{{index==4}}">
-  <text>我的文章</text>
-</view>
+<import src='../../template/book/book_template.wxml' />
 
+
+<van-tabs active="{{index}}">
+  <!-- 我的书 -->
+
+  <van-tab title="我的书" name="1">
+
+    <block wx:for="{{bookList}}">
+      <view class="main">
+        <template is='book' data='{{...item}}' />
+      </view>
+    </block>
+
+  </van-tab>
+
+  <!-- 关注 -->
+  <van-tab title="关注" name="2">
+
+    <view class="container">
+      <block wx:for="{{followList}}">
+        <view class="dbj">
+          <view class="touxiang">
+            <image src="{{item.faceImage}}" class="headPortrait" mode="aspectFit"></image>
+          </view>
+          <view class="content">
+            <view class="name">{{item.nickName}}</view>
+            <view class="label">粉丝数</view>
+            <view class="label">{{item.fansCounts}}</view>
+          </view>
+          <view class="btn">
+            <button wx:if="{{!item.isFollow}}" type="primary" size="mini" bindtap="follow" data-fansid="{{item.userId}}" data-isfollow="{{item.isFollow}}">关注</button>
+            <button wx:if="{{item.isFollow}}" type="default" size="mini" bindtap="follow" data-fansid="{{item.userId}}" data-isfollow="{{item.isFollow}}">已关注</button>
+          </view>
+        </view>
+      </block>
+    </view>
+
+  </van-tab>
+
+  <!-- 粉丝 -->
+  <van-tab title="粉丝" name="3">
+
+    <view class="container">
+      <block wx:for="{{fansList}}">
+        <view class="dbj">
+          <view class="touxiang">
+            <image src="{{item.faceImage}}" class="headPortrait" mode="aspectFit"></image>
+          </view>
+          <view class="content">
+            <view class="name">{{item.nickName}}</view>
+            <view class="label">粉丝数</view>
+            <view class="label">{{item.fansCounts}}</view>
+          </view>
+          <view class="btn">
+            <button wx:if="{{!item.isFollow}}" type="primary" size="mini" bindtap="follow" data-fansid="{{item.userId}}" data-isfollow="{{item.isFollow}}">关注</button>
+            <button wx:if="{{item.isFollow}}" type="default" size="mini" bindtap="follow" data-fansid="{{item.userId}}" data-isfollow="{{item.isFollow}}">已关注</button>
+          </view>
+        </view>
+      </block>
+    </view>
+
+  </van-tab>
+</van-tabs>

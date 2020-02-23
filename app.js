@@ -11,13 +11,12 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        wx.request({
-          url: this.globalData.serverUrl + '/getcode?code=' + res.code,
-          success: (res) => {
-            this.globalData.openId = res.data
-            
-          }
-        })
+        // wx.request({
+        //   url: this.globalData.serverUrl + '/getcode?code=' + res.code,
+        //   success: (res) => {
+        //     this.globalData.openId = res.data
+        //   }
+        // })
       }
     })
 
