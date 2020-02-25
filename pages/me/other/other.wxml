@@ -1,0 +1,51 @@
+<!--pages/me/other/other.wxml-->
+<import src='../../template/book/book_template.wxml' />
+
+<image class="head-img" src="{{otherInfo.faceImage}}" mode="aspectFill"></image>
+<view class="user-img">
+  <van-image round width="200rpx" height="150rpx" src="{{otherInfo.faceImage}}" />
+  <view class="username">
+    <text class="name">{{otherInfo.nickName}}</text>
+  </view>
+  <view class="label">粉丝数</view>
+  <view class="label">{{otherInfo.fansCounts}}</view>
+
+  <view class="btn">
+    <button wx:if="{{!isFollow}}" type="primary" size="mini" bindtap="follow" data-fansid="{{otherInfo.userId}}" data-isfollow="{{isFollow}}">关注</button>
+    <button wx:if="{{isFollow}}" type="default" size="mini" bindtap="follow" data-fansid="{{otherInfo.userId}}" data-isfollow="{{isFollow}}">已关注</button>
+  </view>
+</view>
+
+
+
+<view class="me_1">
+  <van-divider customStyle="color: #1989fa;border-color: #1989fa;font-size: 18px;"></van-divider>
+
+  <view class="grid">
+    <view class='grid-items'>
+      <block wx:for="{{servers}}" wx:key="">
+        <view class='grid-item'>
+          <view class='navigator' hover-class="none">
+            <view class='item-content'>
+              <view class="item-content-icon">
+                <text class="weui-grid_label">{{item.number}}</text>
+              </view>
+              <text class="weui-grid_label">{{item.name}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class="book">
+    <view class="mybook">
+      <text class="book-count">{{otherInfo.nickName}}的作品</text>
+    </view>
+  </view>
+  <block wx:for="{{bookList}}">
+  <view class="main">
+    <template is='book' data='{{...item}}' />
+  </view>
+</block>
+</view>

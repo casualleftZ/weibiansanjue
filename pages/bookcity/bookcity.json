@@ -2,7 +2,9 @@
   "usingComponents": {
     "van-grid": "/dist/grid/index",
     "van-grid-item": "/dist/grid-item/index",
-    "van-search": "/dist/search/index"
+    "van-search": "/dist/search/index",
+    "van-card": "/dist/card/index",
+    "van-tag": "/dist/tag/index"
   },
   "navigationBarTitleText": "书城"
 }

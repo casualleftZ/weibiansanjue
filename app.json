@@ -1,24 +1,25 @@
 {
   "pages": [
+    "pages/bookcity/bookcity",
     "pages/bookshelf/bookshelf",
     "pages/me/me",
     "pages/logs/logs",
-    "pages/bookcity/bookcity",
     "pages/bookcity/classifty/classifty",
     "pages/me/mine/mine",
     "pages/me/advice/advice",
     "pages/me/release/release",
     "pages/chapter/chapter",
-    "pages/chapter/publish/publish"
-   
-   
+    "pages/chapter/publish/publish",
+    "pages/me/other/other",
+    "pages/search/search",
+    "pages/search/searchresult/searchresult"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#98F5FF",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black",
-    "enablePullDownRefresh":true
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "color": "#a9b7b7",
@@ -26,16 +27,16 @@
     "borderStyle": "white",
     "list": [
       {
-        "selectedIconPath": "/images/bookshelf_sel.png",
-        "iconPath": "/images/bookshelf.png",
-        "pagePath": "pages/bookshelf/bookshelf",
-        "text": "书架"
-      },
-      {
         "selectedIconPath": "/images/bookcity_sel.png",
         "iconPath": "/images/bookcity.png",
         "pagePath": "pages/bookcity/bookcity",
         "text": "书城"
+      },
+      {
+        "selectedIconPath": "/images/bookshelf_sel.png",
+        "iconPath": "/images/bookshelf.png",
+        "pagePath": "pages/bookshelf/bookshelf",
+        "text": "书架"
       },
       {
         "selectedIconPath": "/images/me_sel.png",

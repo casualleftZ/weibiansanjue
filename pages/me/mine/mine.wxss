@@ -73,3 +73,7 @@
   margin-top: 57rpx;
  
 }
+.other{
+  display: flex;
+  flex-direction: row
+}

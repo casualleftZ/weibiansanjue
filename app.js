@@ -11,12 +11,12 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        // wx.request({
-        //   url: this.globalData.serverUrl + '/getcode?code=' + res.code,
-        //   success: (res) => {
-        //     this.globalData.openId = res.data
-        //   }
-        // })
+        wx.request({
+          url: this.globalData.serverUrl + '/getcode?code=' + res.code,
+          success: (res) => {
+            this.globalData.openId = res.data
+          }
+        })
       }
     })
 
@@ -61,7 +61,7 @@ App({
   },
 
   globalData: {
-    serverUrl: "http://127.0.0.1:8080",
+    serverUrl: "http://192.168.124.8:8080",
     openId: '',
     userInfo: null,
     isLogin:false

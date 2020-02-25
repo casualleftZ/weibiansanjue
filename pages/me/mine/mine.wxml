@@ -1,6 +1,4 @@
 <!--pages/me/mine/mine.wxml-->
-<import src='../../template/book/book_template.wxml' />
-
 
 <van-tabs active="{{index}}">
   <!-- 我的书 -->
@@ -21,13 +19,15 @@
     <view class="container">
       <block wx:for="{{followList}}">
         <view class="dbj">
-          <view class="touxiang">
-            <image src="{{item.faceImage}}" class="headPortrait" mode="aspectFit"></image>
-          </view>
-          <view class="content">
-            <view class="name">{{item.nickName}}</view>
-            <view class="label">粉丝数</view>
-            <view class="label">{{item.fansCounts}}</view>
+          <view bindtap="otherInfo" class="other" data-otherid="{{item.userId}}" data-otherfollow="{{item.isFollow}}">
+            <view class="touxiang">
+              <image src="{{item.faceImage}}" class="headPortrait" mode="aspectFit"></image>
+            </view>
+            <view class="content">
+              <view class="name">{{item.nickName}}</view>
+              <view class="label">粉丝数</view>
+              <view class="label">{{item.fansCounts}}</view>
+            </view>
           </view>
           <view class="btn">
             <button wx:if="{{!item.isFollow}}" type="primary" size="mini" bindtap="follow" data-fansid="{{item.userId}}" data-isfollow="{{item.isFollow}}">关注</button>
@@ -45,13 +45,15 @@
     <view class="container">
       <block wx:for="{{fansList}}">
         <view class="dbj">
-          <view class="touxiang">
-            <image src="{{item.faceImage}}" class="headPortrait" mode="aspectFit"></image>
-          </view>
-          <view class="content">
-            <view class="name">{{item.nickName}}</view>
-            <view class="label">粉丝数</view>
-            <view class="label">{{item.fansCounts}}</view>
+          <view class="other" bindtap="otherInfo" data-otherid="{{item.userId}}" data-otherfollow="{{item.isFollow}}">
+            <view class="touxiang">
+              <image src="{{item.faceImage}}" class="headPortrait" mode="aspectFit"></image>
+            </view>
+            <view class="content">
+              <view class="name">{{item.nickName}}</view>
+              <view class="label">粉丝数</view>
+              <view class="label">{{item.fansCounts}}</view>
+            </view>
           </view>
           <view class="btn">
             <button wx:if="{{!item.isFollow}}" type="primary" size="mini" bindtap="follow" data-fansid="{{item.userId}}" data-isfollow="{{item.isFollow}}">关注</button>

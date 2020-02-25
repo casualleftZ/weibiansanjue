@@ -1,34 +1,19 @@
-// pages/bookshelf/bookshelf.js
-const app = getApp()
-
+// pages/search/searchresult/searchresult.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    isLogin:false,
-    haveBook:false
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var isLogin = app.globalData.isLogin
-    this.setData({
-      isLogin:isLogin
-    })
+
   },
-
-  login:function(){
-    wx.switchTab({
-      url: '/pages/me/me'
-    })
-  },
-
-
-
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -41,7 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-   
+
   },
 
   /**

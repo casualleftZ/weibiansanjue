@@ -1,11 +1,8 @@
 <!--pages/bookcity/bookcity.wxml-->
+<import src='../template/book/book_template.wxml' />
+
 <!-- 搜索 -->
-<van-search
-  placeholder="请输入搜索关键词"
-  show-action
-  bind:search="onSearch"
-  bind:cancel="onCancel"
-/>
+<van-search bind:focus="tosearch" placeholder="请输入搜索关键词" />
 
 <!-- <轮播图> -->
 <view>
@@ -25,8 +22,67 @@
     <image src="/images/icon1.png" class="sel-img"></image>
     <text class="sel-text">排行</text>
   </view>
-  <view class="select1" bindtap="kaoqin" >
+  <view class="select1" bindtap="kaoqin">
     <image src="/images/icon2.png" class="sel-img"></image>
     <text class="sel-text">分类</text>
   </view>
+</view>
+
+<!-- 正在热更 -->
+<view class="books-container">
+
+  <view class="book-list-container">
+    <view class="inner-container">
+      <view class="book-list-head">
+        <text class="solgon">正在热更</text>
+        <view class="more" bindtap="onMoreTap" data-category="{{categoryTitle}}">
+          <text class="more-text">更多</text>
+          <image class="more-img" src="/images/arrow-right.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <block wx:for="{{updateBook}}">
+    <view class="book-float">
+      <view class="book-container" catchtap="onMovieTap">
+        <image class="book-img" src="{{item.bookIcon}}"></image>
+        <text class="book-title">{{item.bookName}}</text>
+      </view>
+    </view>
+  </block>
+</view>
+
+<view class="hr"></view>
+<view class="books-container">
+
+  <view class="book-list-container">
+    <view class="inner-container">
+      <view class="book-list-head">
+        <text class="solgon">完结丛书</text>
+        <view class="more" bindtap="onMoreTap" data-category="{{categoryTitle}}">
+          <text class="more-text">更多</text>
+          <image class="more-img" src="/images/arrow-right.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+<block wx:for="{{finishBook}}">
+  <view class="finish-container">
+    <image src="{{item.bookIcon}}" class="finish-img"></image>
+    <view class="finish-text">
+      <text class="finish-title">{{item.bookName}}</text>
+      <text class="desc">{{item.bookDesc}}</text>
+      <view class="finish-hot">
+        <view>
+          <image src="/images/hot.png" class="img"></image>
+          <text class="hot">{{item.bookFollows}}人气</text>
+        </view>
+        <van-tag round color="#f2826a">标签</van-tag>
+      </view>
+    </view>
+  </view>
+</block>
+
+
 </view>

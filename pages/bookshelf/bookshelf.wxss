@@ -12,3 +12,23 @@ page{
     float: left;
     margin:0 20rpx 40rpx 0;
 }
+
+.nobook{
+  margin-top: 200rpx;
+  display: flex;
+  flex-direction: column
+}
+.nobook-img{
+  height: 350rpx;
+  width: 350rpx;
+  margin-left: 200rpx
+}
+.submitBtn {
+    width: 60%;
+    margin-top: 60rpx;
+    background-image: linear-gradient(to right, #EEC900 , #EEE685);
+}
+.text{
+  margin-top: 40rpx;
+  margin-left: 200rpx
+}

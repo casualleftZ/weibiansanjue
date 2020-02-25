@@ -43,7 +43,7 @@ Page({
       title: '上传中...',
     })
     wx.uploadFile({
-      url: app.globalData.serverUrl + '/user/uploadbook', //仅为示例，非真实的接口地址
+      url: app.globalData.serverUrl + '/book/uploadbook', //仅为示例，非真实的接口地址
       filePath: this.data.bookIcon,
       name: 'file',
       formData: {
