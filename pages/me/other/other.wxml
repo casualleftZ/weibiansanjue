@@ -45,7 +45,7 @@
   </view>
   <block wx:for="{{bookList}}">
   <view class="main">
-    <template is='book' data='{{...item}}' />
+    <template is='book' data='{{...item,serverUrl}}' />
   </view>
 </block>
 </view>

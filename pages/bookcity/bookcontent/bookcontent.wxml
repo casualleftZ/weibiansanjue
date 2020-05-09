@@ -1,0 +1,40 @@
+<!--pages/index/index.wxml-->
+<view>
+<view class='bookContainer'>
+  <view class='book_cover'>
+  <image class='book_coverimage' src='{{serverUrl}}{{updateBook.bookIcon}}'></image>
+  </view>
+    <view class='book_information'>
+      <view class="book_theme">
+      <text class='bookname'>{{updateBook.bookName}}</text>
+      <text class='bookauthor'>{{updateBook.bookAuthor}}  著</text>
+      </view>
+      <text class="bookyear">出版年份：{{updateBook.createTime}}</text>
+      <button class='booklabel'>标签</button>
+      <view class="book_grade">
+      <text>评分：</text>
+      <text class='grade'>9.7</text>
+      </view>
+      <view class="l_function">
+        <button class='button1'>阅读</button>
+        <button class='button2' catchtap='addbookshelt'>加入书架</button>
+        <button class='button2' bindtap="comment">评论</button>
+      </view>
+    </view>
+  </view>
+      <view class='line'></view>
+      <view>
+      <text font-weight="bold">作品简介：</text>
+      <text class="book_introduce {{ellipsis?'ellipsis':'unellipsis'}}" space="ensp">    {{updateBook.bookDesc}}</text>
+      <view class='bg-white-ellipsis' bindtap="ellipsis">
+        <image class='img-ellipsis' src="{{ellipsis?'../../images/zhankai.png':'../../images/shousuo.png'}}"></image>
+      </view>
+    </view>
+    <view class='line'></view>
+    <view class='book_chapter'>
+      <text class='chapter' >章节</text>
+      <view class='chapter_row' >
+      <text class="chapter_label">第一章</text>
+      </view>
+    </view>
+</view>

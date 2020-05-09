@@ -1,0 +1,152 @@
+/* pages/bookcontent/bookcontent.wxss */
+.row{
+  margin-top:10rpx;
+  display: flex;
+  flex-direction: row;
+}
+.chapter_row{
+  margin-top:30rpx;
+  display: flex;
+  flex-direction: row;
+}
+.column{
+  margin-top:10rpx;
+  display: flex;
+  flex-direction: column;
+}
+.bookContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+.book_cover{
+  display: flex;
+  height: auto;
+  width: 300rpx;
+  box-shadow: 6rpx,6rpx,6rpx,6rpx,gray
+}
+.book_coverimage{
+  margin: 10rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 6rpx,6rpx,6rpx,6rpx,gray
+}
+.book_information{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  margin-left: 15rpx;
+  height: 500rpx;
+}
+.book_theme{
+  display: flex;
+  flex-direction: row;
+}
+.bookname{
+  font-weight:bold;
+  font-size: 40rpx;
+}
+.bookauthor{
+  margin-top: 10rpx;
+  margin-left:60rpx;
+  font-size: 30rpx;
+}
+.book_grade{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+.book_introduce{
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow:hidden;
+}
+
+.l_function{
+  display: flex;
+  flex-direction: row;
+  vertical-align:bottom;
+  height: 80rpx;  
+  margin-bottom: 10rpx;
+}
+.bookyear{
+  margin-top:10rpx;
+}
+.line{
+  background: gray;
+  opacity: 0.5;
+  width: 100%;
+  height: 5rpx;
+}
+.ellipsis{
+  -webkit-line-clamp:3; 
+  opacity:0.75
+}
+
+ .unellipsis {
+ -webkit-line-clamp: 0;
+ opacity: 1
+ }
+
+ .img-ellipsis{
+   height: 50rpx;
+   width:50rpx;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-left: 46%;
+ }
+ .booklabel{
+   margin-left: 0rpx;
+   font-size: 30rpx;
+   margin-top: 20rpx;
+   height: auto;
+   background-color:burlywood;
+   color: white;
+   border-radius: 30rpx; 
+ }
+ .button1{
+   border-radius: 0rpx; 
+   background-color:rgb( 240,133 , 25);
+   color: white;
+   flex-direction: row;
+   font-size: 30rpx;
+   align-items: center;
+   margin-left: 0;
+ }
+ .button2{
+   border-radius: 0rpx; 
+   flex-direction: row;
+   font-size: 30rpx;
+   align-items: center;
+ }
+ .grade{
+   font-size:40rpx;
+   color: red;
+   font-weight: bold;
+   margin-left: 8rpx;
+ }
+ .book_chapter{
+   background-color: white;
+ }
+ .chapter{
+   font-weight:bold;
+   text-align:center;
+   margin-left: 340rpx;
+   justify-content: center;
+ }
+ .chapter_button{
+    border-radius: 20rpx; 
+    flex-direction: row;
+    font-size: 30rpx;
+    margin: auto;
+    width:30%;
+ }
+ .chapter_label{
+   margin-left: 10px;
+   flex-direction: row;
+   font-size: 40rpx;
+ }

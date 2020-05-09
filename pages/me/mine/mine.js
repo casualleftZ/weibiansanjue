@@ -64,7 +64,8 @@ Page({
         this.setData({
           bookList: newBook.concat(bookList),
           page: page,
-          totalPages: res.data.data.pages
+          totalPages: res.data.data.pages,
+          serverUrl: app.globalData.serverUrl
         })
       }
     })

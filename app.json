@@ -5,6 +5,7 @@
     "pages/me/me",
     "pages/logs/logs",
     "pages/bookcity/classifty/classifty",
+    "pages/bookcity/bookcontent/bookcontent",
     "pages/me/mine/mine",
     "pages/me/advice/advice",
     "pages/me/release/release",
@@ -12,6 +13,7 @@
     "pages/chapter/publish/publish",
     "pages/me/other/other",
     "pages/search/search",
+    "pages/comment/comment",
     "pages/search/searchresult/searchresult"
   ],
   "window": {

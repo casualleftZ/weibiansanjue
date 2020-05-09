@@ -139,7 +139,7 @@ Page({
                 isLogin: true
               })
               wx.request({
-                url: app.globalData.serverUrl + '/saveuser',
+                url: app.globalData.serverUrl + '/user/saveuser',
                 method: 'POST',
                 data: {
                   userId: this.data.openId,

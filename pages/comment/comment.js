@@ -1,5 +1,5 @@
-// pages/bookcity/bookcity.js
-const app = getApp()
+// pages/comment/comment.js
+const app = getApp();
 
 Page({
 
@@ -7,81 +7,63 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imgUrls: [
-      '/images/read.png',
-      '/images/read2.jpg',
-    ],
-    indicatorDots: true,
-    autoplay: true,
-    interval: 2000,
-    duration: 1000,
-    indicatorcolor: "#FFFFFF",
-    indicatoractivecolor: "#FF7F50",
-    circular: true,
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    this.hotUpdate()
-    this.hotFinish()
-  },
-
-  onMovieTap:function(e){
-    var bookId = e.currentTarget.dataset.id
-    wx.navigateTo({
-      url: 'bookcontent/bookcontent?bookid='+bookId,
+    var bookid = options.bookid
+    var user = app.getGlobalInfo()
+    this.setData({
+      userInfo:user,
+      bookid:bookid
     })
-  },
+    this.getComment(bookid)
 
-  tosearch: function() {
-    wx.navigateTo({
-      url: '../search/search',
-    })
   },
-
-  //首页热更
-  hotUpdate: function() {
-    wx.showLoading({
-      title: '加载中...',
-    })
+  getComment: function (bookid){
     wx.request({
-      url: app.globalData.serverUrl + '/book/hotupdate',
+      url: app.globalData.serverUrl + '/comment/getcomments?bookId=' + bookid,
       success: (res) => {
-        wx.hideLoading()
         console.log(res.data.data)
         this.setData({
-          updateBook: res.data.data,
+          commentList: res.data.data,
           serverUrl: app.globalData.serverUrl
         })
       }
     })
   },
-  //首页完结
-  hotFinish: function() {
-    wx.showLoading({
-      title: '加载中...',
-    })
+
+  getInputValue:function(e){
+    var comment = e.detail.value
     wx.request({
-      url: app.globalData.serverUrl + '/book/finish',
+      url: app.globalData.serverUrl + '/comment/addcomments',
+      method:'POST',
+      data:{
+        userId:this.data.userInfo.userId,
+        wchapterId:this.data.bookid,
+        content:comment,
+        faceImg: this.data.userInfo.faceImage,
+        userName: this.data.userInfo.nickName
+      },
       success: (res) => {
-        wx.hideLoading()
+        console.log(res.data.data)
         this.setData({
-          finishBook: res.data.data,
-          serverUrl: app.globalData.serverUrl
+          inputValue: ''
         })
+        this.getComment(this.data.bookid)
       }
     })
+    
   },
-
-
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-
+    
   },
 
   /**

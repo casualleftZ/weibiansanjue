@@ -49,7 +49,7 @@ Page({
       formData: {
         userId: this.data.userId,
         bookName:this.data.bookName,
-        bookDesc: this.data.desc,
+        bookDesc: this.data.bookDesc,
         chapterContent:chapterContent,
         chapterTitle:chapterTitle
       },

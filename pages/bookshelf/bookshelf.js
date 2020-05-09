@@ -16,9 +16,22 @@ Page({
    */
   onLoad: function (options) {
     var isLogin = app.globalData.isLogin
+    var userInfo = app.getGlobalInfo()
     this.setData({
       isLogin:isLogin
     })
+
+  wx.request({
+    url: app.globalData.serverUrl +'/book/mycollect?userId='+userInfo.userId,
+    success:(res)=>{
+      console.log(res.data)
+      this.setData({
+        bookList:res.data.data,
+        haveBook: true,
+        serverUrl: app.globalData.serverUrl
+      })
+    }
+  })
   },
 
   login:function(){

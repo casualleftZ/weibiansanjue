@@ -1,5 +1,5 @@
 <!--pages/me/mine/mine.wxml-->
-
+<import src='../../template/book/book_template.wxml' />
 <van-tabs active="{{index}}">
   <!-- 我的书 -->
 
@@ -7,7 +7,7 @@
 
     <block wx:for="{{bookList}}">
       <view class="main">
-        <template is='book' data='{{...item}}' />
+        <template is='book' data='{{...item,serverUrl}}' />
       </view>
     </block>
 

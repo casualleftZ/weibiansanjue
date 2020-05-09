@@ -45,8 +45,8 @@
 
   <block wx:for="{{updateBook}}">
     <view class="book-float">
-      <view class="book-container" catchtap="onMovieTap">
-        <image class="book-img" src="{{item.bookIcon}}"></image>
+      <view class="book-container" catchtap="onMovieTap" data-id="{{item.bookId}}">
+        <image class="book-img" src="{{serverUrl}}{{item.bookIcon}}"></image>
         <text class="book-title">{{item.bookName}}</text>
       </view>
     </view>
@@ -68,8 +68,8 @@
     </view>
   </view>
 <block wx:for="{{finishBook}}">
-  <view class="finish-container">
-    <image src="{{item.bookIcon}}" class="finish-img"></image>
+  <view class="finish-container" catchtap="onMovieTap" data-id="{{item.bookId}}">
+    <image src="{{serverUrl}}{{item.bookIcon}}" class="finish-img"></image>
     <view class="finish-text">
       <text class="finish-title">{{item.bookName}}</text>
       <text class="desc">{{item.bookDesc}}</text>

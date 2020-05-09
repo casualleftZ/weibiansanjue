@@ -1,6 +1,6 @@
 <template name='book'>
     <view class="book-container" catchtap="onMovieTap">
-      <image class="book-img" src="{{bookIcon}}"></image>
+      <image class="book-img" src="{{serverUrl}}{{bookIcon}}"></image>
       <text class="status" wx:if="{{bookStatus==0}}">审核中</text>
       <text class="status" wx:if="{{bookStatus==1}}">连载中</text>
       <text class="status" wx:if="{{bookStatus==2}}">已完结</text>

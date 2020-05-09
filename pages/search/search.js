@@ -11,11 +11,11 @@ Page({
 
     // 2 搜索栏初始化
     var that = this;
-    var serverUrl = app.serverUrl
     wx.request({
-      url: serverUrl + '/search/hotwords',
+      url: 'http://127.0.0.1:8080/search/hotwords',
       success: function (res) {
         var hotList = res.data.data
+        console.log(res.data)
         WxSearch.init(
           that, // 本页面一个引用
           // ['杭州', '嘉兴', "海宁", "桐乡", '宁波', '金华'], // 热点搜索推荐，[]表示不使用
@@ -46,7 +46,7 @@ Page({
     // do your job here
     // 示例：跳转
     wx.redirectTo({
-      url: '../index/index?isSave=1&searchValue=' + value
+      url: 'searchresult/searchresult?searchValue=' + value
     })
   },
 

@@ -7,9 +7,11 @@
     <button class="submitBtn">书架空空，去书城看看</button>
   </view>
   <view wx:if="{{haveBook}}" class="container">
-    <view class="main">
-      <template is='book' />
-    </view>
+    <block wx:for="{{bookList}}">
+      <view class="main">
+        <template is='book' data='{{...item,serverUrl}}' />
+      </view>
+    </block>
   </view>
 </view>
 

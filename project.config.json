@@ -85,6 +85,21 @@
 					"id": -1,
 					"name": "pages/me/other/other",
 					"pathName": "pages/me/other/other",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search/searchresult/searchresult",
+					"pathName": "pages/search/searchresult/searchresult",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/comment/comment",
+					"pathName": "pages/comment/comment",
+					"query": "",
 					"scene": null
 				}
 			]
